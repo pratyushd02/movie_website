@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+   
+    margin: 30px 30px;
+    padding: 8px;
+    height: 100%;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.form{
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 20px 15px 20px;
+    height: 100%;
+    
+}
+h1{
+    text-align: center;
+    font-weight: 200;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px 0px 15px 0px;
+
+}
+input[type="email"],
+input[type="text"]
+{
+    display: block;
+}
+
+.heading{
+    text-align: center;
+    background-color: lightgreen;
+    font-family: 'Montserrat', sans-serif;
+    color: mediumblue;
+    text-shadow: 1px 1px mediumblue;
+    font-weight: 900;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px 0px 15px 0px;
+}
+
+.subheading{
+    text-align: left;
+    font-style: italic;
+    color: white
+}
+
+
+.carddet{
+    width: 25%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+.city, .name{
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+.cvv{
+    width: 10%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+input[type="email"],
+input[type="submit"],
+input[type="reset"],
+textarea,
+select
+{
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+
+}
+
+input[type="number"]{
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover
+{
+    cursor: grab;
+    background-color: crimson;
+    color:white;
+    font-size: 120%;
+}
+
+::placeholder{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+textarea{
+    height: 45px;
+    width: 600px;
+}
+
+
+input[type="submit"],input[type="reset"]{
+   text-align: center;
+    width: 200px;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    font-size: 20px;
+    font-style: inherit;
+    
+    
+}   
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    padding-right: 50px;
+}
+
+fieldset{
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+}
+
+
+header{
+    color:crimson;
+    text-align: center;
+}
+;

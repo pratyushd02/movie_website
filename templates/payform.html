@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="static/styles/form.css">
+</head>
+<body>
+    <div class="form">
+    <p>Amount to be paid : {{amt}}<br> {{b}}
+    </p>
+    
+    <p>
+        {% if m == 'Credit Card' or m=='Debit Card' %}
+        <form action="/paymentform" method="post" class="form">
+        <p>Name on Card:</p>
+        <input type="text" name="name-card" class="carddet" placeholder="Enter Name on Card" required><br>
+        <p>Card Number : </p>
+        <input type="text" name="number-card" class="carddet" placeholder="Enter Card Number" required><br> 
+        <p>Exp Year :</p> 
+        <input  type="text"  name="month-card" class="carddet" placeholder="Enter Expiry Year" required><br>
+        <p>CVV : </p> 
+        <input class="cvv" type="password" name="cvv" placeholder="Enter CVV" required>
+        <p>Message: <br>
+            <textarea name="Message" placeholder="This Area is for you to enter some Message(optional)"></textarea>
+        </p>
+        <div style="text-align: center;"> <!-- This div is used to align both buttons in center--> 
+            <input type="submit" value="Pay" >
+            <input type="reset"  value="Reset">
+        </div>
+        </form> 
+        {% elif m == 'Cash' %}
+        <form action="/paymentformcash" method="post">
+        See you at cinema, please arrive 10 min earlier to do the payment,Thankyou
+        <p>Message: <br>
+            <textarea name="Message" placeholder="This Area is for you to enter some Message(optional)"></textarea>
+        </p>
+        <div style="text-align: center;"> <!-- This div is used to align both buttons in center--> 
+            <input type="submit" value="Pay">
+            <input type="reset"  value="Reset">
+        </div>
+        </form> 
+        {% endif %}
+    </p>
+
+        
+    </div>
+    
+</body>
+</html>

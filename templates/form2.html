@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="static/styles/form.css">
+</head>
+<body>
+    <header>
+       <h1>TICKET BOOKING</h1>
+    </header>
+    <p>
+      <h2 style="color: white;"> Movie Name : {{mn}} </h2> 
+    </p>
+    <form action="/form2" method="POST">
+    <div class="form">      <!--This is the main div and entire form is made in this-->
+
+        
+        
+        <h2 class="subheading">Fill all the field listed below</h2>
+
+
+        <p>Name:             <!--Input for forms starts from here-->
+        <input type="text" class='name' name="name" placeholder="Enter Your Full Name" required>
+        </p>
+        <p>Email Address:
+            <input type="email" name="email" placeholder="Enter A valid Email" required>
+        </p>
+
+        <p>Location : NDP Cinemas, Andheri, Mumbai<br>Timings : {{t}}
+        </p>
+
+
+        <p>Row preference:<br>
+            
+            <input type="radio" name="row" value="Bottom" required>Bottom<br>
+            <input type="radio" name="row" value="Middle">Middle<br>
+            <input type="radio" name="row" value="Top">Top<br>
+      
+        </p>
+
+        <p>Number of Tickets needed :<br>
+
+            Enter number of tickets: <input type="number" name='tickets' required>
+
+        </p>
+
+        <p>Payment:
+            <select name="payment" required>
+                <option value="">Select Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card" >Debit Card</option>
+                <!--<option value="UPI">UPI</option>-->
+                <option value="Cash">Cash</option>
+
+            </select>
+            <br><br>
+        </p>
+       
+
+        <div style="text-align: center;"> <!-- This div is used to align both buttons in center--> 
+        <input type="submit" value="Next" >
+        <input type="reset"  value="Reset">
+        </div>
+
+    </div>
+    </form>
+    {% block content %}{% endblock %}
+</body>
+</html>

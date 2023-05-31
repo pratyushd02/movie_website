@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">  
+    <script>
+      function myFunction() {
+        var x = document.getElementById("home");
+        if (x.className === "topnav") {
+        x.className += " responsive";
+        } else {
+        x.className = "topnav";
+        }
+      }
+      </script>
+      <script>
+        $(function() {
+          var pull 		= $('#pull');
+            menu 		= $('nav ul');
+            menuHeight	= menu.height();
+          $(pull).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+          });
+          $(window).resize(function(){
+            var w = $(window).width();
+            if(w > 320 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+            }
+          });
+        });
+      </script>
+    <title>cinema.io</title>
+  </head>
+  <body>
+    <div class="banner">
+    <section>
+      <div class="container">
+        <!-- <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#book">Book</a>
+            </li>
+            <a href="javascript:void(0);" id="pull" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i></a>
+          </ul> -->
+          <div class="topnav" id="home">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#movie">Movies</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i></a>
+            </div>
+          </section>
+<section>
+    <div class="container">
+          <div class="home_class">
+            <h2 class="fade-in-text">Welcome to</h2>
+            <p><span>cinema.io</span></p>
+            <p class="fade-in-text">Latest movies a click away!</p>
+        </div>
+    </div>
+</section>
+</div>
+<section id = "about">
+  <div class="about_us">
+    <div>
+    <h2>About Us</h2>
+    </div>
+    <br></br>
+    <div class="p_aboutus">
+    <p>We are a Mumbai based company providing you with special, premium and easy way to book tickets to your favourite movies and shows. With the embedded Dolby Atmos speakers and HDR AMOLED cinema fused with Dolby Vision screen you will have the most thrilling cinema experience at your comfort.</p>
+    <p>Keep visiting us for the best cinema experiance in the most affordable price.</p>
+    <p>For more updates, <a href="#contact">contact us!</a></p>
+  </div>
+  </div>
+</section>
+<section id= "movie">
+  <div class="Movie">
+        <h2>Movies</h2>
+        <div class="row">
+        <div class="card bg-dark" style="width: 18rem;">
+          <div class="img_wrap">
+          <img class="card-img-top" src="../static/movie1.png" alt="">
+          <p class="img__description">Shang Chi</p>
+          </div>
+          <div class="card-body">
+            <a href="https://www.imdb.com/title/tt9376612/?ref_=nv_sr_srsg_0" target="_blank" class="btn btn-danger">More info</a>
+            <a href="/form1"><input type="button" value="Book" class="btn btn-danger" onclick="form1()"></a>
+          </div>
+        </div>
+        <div class="card bg-dark" style="width: 18rem;">
+          <div class="img_wrap">
+          <img class="card-img-top" src="../static/movie2.png" alt="">
+          <p class="img__description">Black Widow</p>
+          </div>
+          <div class="card-body">
+            <a href="https://www.imdb.com/title/tt3480822/?ref_=nv_sr_srsg_0" target="_blank" class="btn btn-danger">More info</a>
+            <a href="/form2" class="btn btn-danger">Book</a>
+          </div>
+        </div>
+        <div class="card bg-dark" style="width: 18rem;">
+          <div class="img_wrap">
+          <img class="card-img-top" src="../static/movie_3.png" alt="">
+          <p class="img__description">Fast and Furious 9</p>
+          </div>
+          <div class="card-body">
+            <a href="https://www.imdb.com/title/tt5433138/?ref_=nv_sr_srsg_0" target="_blank" class="btn btn-danger">More info</a>
+            <a href="/form3" class="btn btn-danger">Book</a>
+          </div>
+        </div>
+        <div class="card bg-dark" style="width: 18rem;">
+          <div class="img_wrap">
+            <img class="card-img-top" src="../static/movie_4.png" alt="">
+            <p class="img__description">bell bottom</p>
+            </div>
+          <div class="card-body">
+            <a href="https://www.imdb.com/title/tt11260832/" target="_blank" class="btn btn-danger">More info</a>
+            <a href="/form4" class="btn btn-danger">Book</a>
+          </div>
+        </div>
+        </div>
+  </div>
+</section>
+<section id="contact"><!-- start footer -->
+  <div class="footer_bg">
+  <div class="container">
+    <div class="row footer">
+      <div class="justify-content-center contact_left">
+        <h3 class="text-center"><span>Contact Us</span></h3>
+        <ul class="list-unstyled address" id="contact_me">
+          <li><i class="fa fa-map-marker"></i><span>Mumbai, Maharashtra</span></li>
+          <li><i class="fa fa-phone"></i><span>+91-9876-54321</span></li>
+          <li><i class="fa fa-envelope"></i><a href="mailto:help@cinemas">help@vcinemas.io</a></li>
+        </ul>
+      </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
